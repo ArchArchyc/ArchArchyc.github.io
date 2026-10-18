@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Replace these with your real details.
+const contacts = [
+  { label: 'Email', text: 'you@example.com', href: 'mailto:you@example.com' },
+  { label: 'GitHub', text: 'github.com/your-username', href: 'https://github.com/your-username' },
+  { label: 'LinkedIn', text: 'linkedin.com/in/your-name', href: 'https://linkedin.com/in/your-name' },
+];
+---
+
+<Layout title="Contact" description="Contact Archyc">
+  <h1>Contact</h1>
+  <p>The best way to reach me is by email, or find me on the links below.</p>
+
+  <div class="card">
+    <ul class="contact-list">
+      {contacts.map((c) => (
+        <li>
+          <span class="label">{c.label}</span>
+          <a href={c.href}>{c.text}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>

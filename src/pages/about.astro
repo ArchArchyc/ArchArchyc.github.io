@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Edit this list to change the skills shown on the page.
+const skills = ['Python', 'C++', 'Game modding', 'Scripting', 'Machine learning'];
+---
+
+<Layout title="About" description="About Archyc">
+  <h1>About me</h1>
+
+  <p>
+    Write 2-3 sentences here about who you are and what you like to build.
+    Mention how you got started and what you're working on now.
+  </p>
+
+  <h2>What I work with</h2>
+  <ul class="tag-list">
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+
+  <h2>Background</h2>
+  <p>
+    Replace this with a short paragraph about your experience, self-taught
+    learning, and the kind of work you're looking for.
+  </p>
+</Layout>
